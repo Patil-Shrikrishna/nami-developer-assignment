@@ -68,6 +68,11 @@ export default App;
         status="Rejected"
       />
       <StatusCard
+          bgColor="bg-[#CC2610]"
+          textColor="text-[#FFFFFF]"
+          status="Complaint"
+      />
+      <StatusCard
         bgColor="bg-[#F7F7F7]"
         textColor="text-[#5F69C7]"
         status="Internal Task"

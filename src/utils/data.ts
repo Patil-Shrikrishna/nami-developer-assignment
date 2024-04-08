@@ -2,6 +2,7 @@ type Task = {
   taskStatus: string;
   staffName: string;
   serviceType: string;
+  waitingTime: number;
   taskType: string;
   internalFrom: string;
   internalTo: string;
@@ -18,6 +19,7 @@ type Task = {
 const dummyData: Task[] = [
   {
     taskStatus: "not accepted",
+    waitingTime: 20,
     staffName: "Jane Smith",
     serviceType: "Routine Cleaning",
     taskType: "Guest",
@@ -34,6 +36,7 @@ const dummyData: Task[] = [
   },
   {
     taskStatus: "not accepted",
+    waitingTime: 20,
     staffName: "John Doe",
     serviceType: "Deep Cleaning",
     taskType: "Guest",
@@ -49,6 +52,7 @@ const dummyData: Task[] = [
   },
   {
     taskStatus: "accepted",
+    waitingTime: 5,
     staffName: "Alice Johnson",
     serviceType: "Maintenance",
     taskType: "Repair",
@@ -60,6 +64,7 @@ const dummyData: Task[] = [
   },
   {
     taskStatus: "accepted",
+    waitingTime: 20,
     staffName: "David Brown",
     serviceType: "Housekeeping",
     taskType: "Room Cleaning",
@@ -75,6 +80,7 @@ const dummyData: Task[] = [
   },
   {
     taskStatus: "accepted",
+    waitingTime: 20,
     staffName: "Emily White",
     serviceType: "Room Service",
     taskType: "Food Delivery",
@@ -91,6 +97,7 @@ const dummyData: Task[] = [
   },
   {
     taskStatus: "completed",
+    waitingTime: 0,
     staffName: "Michael Green",
     serviceType: "Routine Cleanup",
     taskType: "Internal",
@@ -101,6 +108,7 @@ const dummyData: Task[] = [
   },
   {
     taskStatus: "ongoing",
+    waitingTime: 20,
     staffName: "Sarah Taylor",
     serviceType: "Concierge",
     taskType: "Guest Assistance",
@@ -112,6 +120,7 @@ const dummyData: Task[] = [
   },
   {
     taskStatus: "ongoing",
+    waitingTime: 20,
     staffName: "Robert Wilson",
     serviceType: "Valet",
     taskType: "Car Parking",
@@ -122,6 +131,7 @@ const dummyData: Task[] = [
   },
   {
     taskStatus: "delayed",
+    waitingTime: 20,
     staffName: "Jessica Lee",
     serviceType: "Spa",
     taskType: "Massage",
@@ -133,6 +143,7 @@ const dummyData: Task[] = [
   },
   {
     taskStatus: "delayed",
+    waitingTime: 20,
     staffName: "Daniel Harris",
     serviceType: "Maintenance",
     taskType: "HVAC Repair",
@@ -146,6 +157,7 @@ const dummyData: Task[] = [
 
   {
     taskStatus: "accepted",
+    waitingTime: 20,
     staffName: "Jane Smith",
     serviceType: "Routine Cleaning",
     taskType: "Guest",
@@ -162,6 +174,7 @@ const dummyData: Task[] = [
   },
   {
     taskStatus: "accepted",
+    waitingTime: 20,
     staffName: "John Doe",
     serviceType: "Deep Cleaning",
     taskType: "Guest",
@@ -177,6 +190,7 @@ const dummyData: Task[] = [
   },
   {
     taskStatus: "completed",
+    waitingTime: 0,
     staffName: "Alice Johnson",
     serviceType: "Maintenance",
     taskType: "Repair",
@@ -188,6 +202,7 @@ const dummyData: Task[] = [
   },
   {
     taskStatus: "not accepted",
+    waitingTime: 20,
     staffName: "David Brown",
     serviceType: "Housekeeping",
     taskType: "Room Cleaning",
@@ -203,6 +218,7 @@ const dummyData: Task[] = [
   },
   {
     taskStatus: "not accepted",
+    waitingTime: 20,
     staffName: "Emily White",
     serviceType: "Room Service",
     taskType: "Food Delivery",
@@ -219,6 +235,7 @@ const dummyData: Task[] = [
   },
   {
     taskStatus: "completed",
+    waitingTime: 0,
     staffName: "Michael Green",
     serviceType: "Routine Cleanup",
     taskType: "Internal",
@@ -229,6 +246,7 @@ const dummyData: Task[] = [
   },
   {
     taskStatus: "ongoing",
+    waitingTime: 20,
     staffName: "Sarah Taylor",
     serviceType: "Concierge",
     taskType: "Guest Assistance",
@@ -240,6 +258,7 @@ const dummyData: Task[] = [
   },
   {
     taskStatus: "delayed",
+    waitingTime: 20,
     staffName: "Robert Wilson",
     serviceType: "Valet",
     taskType: "Car Parking",
@@ -250,6 +269,7 @@ const dummyData: Task[] = [
   },
   {
     taskStatus: "delayed",
+    waitingTime: 20,
     staffName: "Jessica Lee",
     serviceType: "Spa",
     taskType: "Massage",
@@ -261,6 +281,7 @@ const dummyData: Task[] = [
   },
   {
     taskStatus: "completed",
+    waitingTime: 0,
     staffName: "Daniel Harris",
     serviceType: "Maintenance",
     taskType: "HVAC Repair",

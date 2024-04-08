@@ -1,9 +1,12 @@
 import React from "react";
-import one from "./assets/one.png";
-import swap from "./assets/swap.png";
-import priority from "./assets/priority.png";
-import clock from "./assets/clock.png";
-import StatusCard from "./components/StatusCard";
+
+import MainPage from "./Pages/MainPage";
+
+// import one from "./assets/one.png";
+// import swap from "./assets/swap.png";
+// import priority from "./assets/priority.png";
+// import clock from "./assets/clock.png";
+// import StatusCard from "./components/StatusCard";
 // import SideNav from "./components/SideNav";
 // import MobileFooter from "./components/MobileFooter";
 // import TopNav from "./components/TopNav";
@@ -17,8 +20,15 @@ const App: React.FC = () => {
       {/* <TopNav /> */}
       {/* <MobileFooter /> */}
       {/* <SideNav /> */}
+      <MainPage />
+    </div>
+  );
+};
 
-      <StatusCard
+export default App;
+
+{
+  /* <StatusCard
         bgColor="bg-[#CC2610]"
         textColor="text-[#FFFFFF]"
         status="Pending"
@@ -91,9 +101,5 @@ const App: React.FC = () => {
         bgColor="bg-[#F7F7F7]"
         textColor="text-[#1A0A02]"
         icon={one}
-      />
-    </div>
-  );
-};
-
-export default App;
+      /> */
+}

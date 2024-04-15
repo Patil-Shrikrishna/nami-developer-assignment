@@ -43,7 +43,7 @@ const SideNav: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col w-2/6  ">
+    <div className="flex flex-col w-full  ">
       {menuItems.map((menuItem) => (
         <div key={menuItem.id}>
           <div

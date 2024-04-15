@@ -10,7 +10,7 @@ const StatusCard: React.FC<{
     <div
       className={`${bgColor} ${textColor} ${
         status && icon ? "gap-2" : ""
-      } p-2 flex justify-center items-center text-center w-fit rounded-full`}
+      } p-2 text-[12px] flex justify-center whitespace-nowrap items-center text-center w-fit rounded-full`}
     >
       <p>{status}</p>
       {icon && <img src={icon} className="w-4" />}

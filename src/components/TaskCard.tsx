@@ -37,7 +37,7 @@ const TaskCard: React.FC<TaskCardProps> = ({
   items = { shampoo: 0, conditioner: 0, towel: 0 },
 }) => {
   return (
-    <div className="flex flex-col gap-2 border border-[#767676] rounded-lg p-2">
+    <div className="flex flex-col gap-2 border border-[#767676] rounded-lg p-2 h-fit">
       <div className="flex gap-2 justify-between items-center">
         <StaffProfile name={staffName} />
         <StatusCard
@@ -58,7 +58,7 @@ const TaskCard: React.FC<TaskCardProps> = ({
         {waitingTime > 0 && <Timer waitingTime={waitingTime} />}
       </div>
       <div className="flex justify-between">
-        <h2 className="text-3xl font-semibold">{serviceType}</h2>
+        <h2 className="text-xl font-semibold">{serviceType}</h2>
         <StatusCard
           status={taskType}
           bgColor={`${taskType === "internal task" && "bg-[#F7F7F7]"}
@@ -77,29 +77,35 @@ const TaskCard: React.FC<TaskCardProps> = ({
         <p className="text-[#767676]">#{taskID}</p>
       </div>
       <div className="flex justify-between">
-        <h2 className="font-semibold text-2xl text-[#767676]">
+        <h2 className="font-semibold text-md text-[#767676]">
           From:{internalFrom}
         </h2>
-        <h2 className="font-semibold text-2xl text-[#767676]">
+        <h2 className="font-semibold text-md text-[#767676]">
           To:{internalTo}
         </h2>
       </div>
       {items && (
         <div className="bg-[#F7F7F7]">
-          {Object.entries(items).map(([itemName, quantity], index) => (
-            <div key={index}>
-              <p className="font-semibold text-2xl text-[#767676]">
-                {itemName}
-              </p>
-              <p className="font-semibold text-2xl text-[#767676]">
-                {quantity}
-              </p>
-            </div>
-          ))}
+          {Object.entries(items).map(
+            ([itemName, quantity], index) =>
+              quantity > 0 && (
+                <div key={index} className="flex">
+                  <p className="font-semibold text-sm text-[#767676]">
+                    {itemName}
+                  </p>
+                  <p className="flex justify-center text-sm items-center text-center px-4">
+                    X
+                  </p>
+                  <p className="font-semibold text-sm text-[#767676]">
+                    {quantity}
+                  </p>
+                </div>
+              )
+          )}
         </div>
       )}
       {instructions && (
-        <p className="text-xl bg-[#F7F7F7] text-[#5F69C7]">
+        <p className="text-sm bg-[#F7F7F7] text-[#5F69C7]">
           Instructions: {instructions}
         </p>
       )}
